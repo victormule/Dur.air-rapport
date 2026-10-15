@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dür.air – Évaluation en conservation-restauration</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --text: #1f2933;
+    --muted: #5f6c7b;
+    --accent: #1f6feb;
+    --accent-soft: #e8f0fe;
+    --border: #e2e6ea;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+    color: var(--text);
+    background: var(--bg);
+  }
+  header {
+    background: linear-gradient(135deg, #14305c, var(--accent));
+    color: #fff;
+    padding: 4rem 1.25rem 3.5rem;
+    text-align: center;
+  }
+  header h1 { margin: 0 0 .5rem; font-size: clamp(1.8rem, 6vw, 3rem); }
+  header p { margin: 0; opacity: .9; font-size: 1.1rem; }
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    display: flex; gap: .25rem; flex-wrap: wrap; justify-content: center;
+    padding: .5rem;
+  }
+  nav a {
+    color: var(--muted); text-decoration: none;
+    padding: .4rem .8rem; border-radius: 6px; font-size: .92rem;
+  }
+  nav a:hover { background: var(--accent-soft); color: var(--accent); }
+  main { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+    scroll-margin-top: 4rem;
+  }
+  h2 { margin-top: 0; color: #14305c; }
+  h3 { margin-bottom: .3rem; color: var(--accent); font-size: 1.05rem; }
+  ul, ol { padding-left: 1.3rem; }
+  li { margin-bottom: .3rem; }
+  .callout {
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    padding: .8rem 1rem;
+    border-radius: 0 8px 8px 0;
+    margin: 1rem 0;
+  }
+  .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .tile {
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1rem;
+  }
+  .tile strong { display: block; margin-bottom: .25rem; }
+  .tile span { color: var(--muted); font-size: .92rem; }
+  a.btn {
+    display: inline-block; margin-top: .4rem;
+    background: var(--accent); color: #fff; text-decoration: none;
+    padding: .45rem .9rem; border-radius: 8px; font-size: .92rem;
+  }
+  a.btn:hover { opacity: .9; }
+  figure { margin: 1.25rem 0; }
+  figure img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border); display: block; }
+  figcaption { color: var(--muted); font-size: .88rem; margin-top: .4rem; text-align: center; }
+  footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 2rem 1rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Évaluation de Dür.air en conservation-restauration</h1>
+  <p>Retour d’essais en atelier auprès d’utilisateurs néophytes</p>
+</header>
+
+<nav>
+  <a href="#objectif">Objectif</a>
+  <a href="#testeurs">Testeurs</a>
+  <a href="#atelier">Atelier</a>
+  <a href="#devis">Avant devis</a>
+  <a href="#annotation">Annotation</a>
+  <a href="#prise-en-main">Prise en main</a>
+  <a href="#limites">Limites</a>
+  <a href="#bilan">Bilan</a>
+  <a href="#prolongements">Prolongements</a>
+</nav>
+
+<main>
+
+<section id="objectif">
+  <h2>Objectif de l’évaluation</h2>
+  <p>Le stage visait à évaluer la pertinence et la prise en main de Dür.air en atelier, à l’École supérieure d’art d’Avignon (ESAA), auprès d’utilisateurs peu familiers avec la photogrammétrie. L’application leur a paru accessible, mais certaines fonctions restent difficiles à intégrer au flux de travail du restaurateur.</p>
+  <p>L’évaluation a porté sur la pertinence de l’outil en conservation-restauration et sur sa prise en main. Il s’agissait de vérifier son intégration au travail quotidien, sans expertise préalable importante.</p>
+</section>
+
+<section id="testeurs">
+  <h2>Profil des testeurs</h2>
+  <div class="grid">
+    <div class="tile"><strong>Six étudiantes de l’ESAA</strong><span>Laura, Laura, Élise, Charlotte, Zoé et Marie, en 3ᵉ ou 5ᵉ année. Toutes travaillaient sur un objet patrimonial, parfois dans le cadre de leur diplôme : étude du contexte historique, étude de la matérialité, constat d’état, proposition de traitement, traitement.</span></div>
+    <div class="tile"><strong>Deux professionnels</strong><span>Paul et François, qui ont notamment mené des chantiers de conservation avec le musée de la Marine de Saint-Nazaire, le Mucem à Marseille et le musée Jacquemart-André.</span></div>
+    <div class="tile"><strong>L’auteur</strong><span>Déjà familier de la photogrammétrie (Polycam, Metashape), sans iPad auparavant.</span></div>
+  </div>
+  <p>Aucun testeur, hormis l’auteur, n’avait pratiqué la photogrammétrie. Aucun ne possédait d’iPad.</p>
+</section>
+
+<section id="atelier">
+  <h2>1. Utilisation en atelier</h2>
+  <p>À l’ESAA, les œuvres étaient déjà présentes en atelier. Nous n’avons donc pas testé de situation d’« aller-voir » préalable au devis. Les essais ont porté sur le constat d’état et le suivi des traitements. Le poisson volant de Laura (5ᵉ année), étudiante particulièrement réceptive, a servi de cas d’étude récurrent.</p>
+  <figure>
+    <img src="image1.jpeg" alt="Capture d’écran de Dür.air : modèle 3D d’un grondin volant avec ses annotations" loading="lazy">
+    <figcaption>Le poisson volant de Laura (grondin volant) annoté dans Dür.air.</figcaption>
+  </figure>
+
+  <h3>1.1 Accompagnement des utilisateurs néophytes</h3>
+  <p>Les premières difficultés apparaissent dès la prise de vues. Le débutant doit choisir le cadrage, la distance, le recouvrement et l’éclairage. Il doit aussi reconnaître les matériaux et les formes qui risquent de poser problème.</p>
+  <p>Un accompagnement pendant l’acquisition serait utile. Je n’ai toutefois pas suivi le tutoriel et ne peux donc pas préciser si ces points y sont déjà expliqués.</p>
+
+  <h3>1.2 Acquisition photogrammétrique et photographies de constat</h3>
+  <p>Les photographies destinées au modèle 3D ne répondent pas toujours aux besoins du constat d’état. La reconstruction demande des images relativement homogènes : il faut tourner autour de l’objet, garder des cadrages assez larges et prévoir un recouvrement adapté. Le constat nécessite aussi des photographies de détail, dont le cadrage dépend de l’altération ou de la zone à documenter.</p>
+  <p>En pratique, deux campagnes se succèdent : l’acquisition du modèle 3D, puis la documentation photographique de l’état de conservation.</p>
+  <p>Une session peut réunir plusieurs centaines, voire un millier d’images. Leur classement devient alors essentiel. Il serait utile de les organiser selon leur fonction, et d’associer une photographie de détail directement à une annotation.</p>
+  <p>Il faudrait également pouvoir prendre une photographie directement depuis une annotation. Cela éviterait de quitter Dür.air pour utiliser l’appareil photo de l’iPad, puis d’y revenir pour importer l’image.</p>
+
+  <h3>1.3 Compléter une acquisition après calcul</h3>
+  <p>Il fallait quitter l’acquisition pour lancer le calcul photogrammétrique. Le résultat révélait parfois une zone incomplète ou mal photographiée. Les utilisateurs ne trouvaient pas comment reprendre l’acquisition pour ajouter les images manquantes. Nous n’avons pas pu déterminer si cette fonction était absente ou difficile à trouver.</p>
+  <p>Il fallait souvent recommencer toute la série. La session initiale devenait peu utile, sans que les utilisateurs sachent la supprimer. Une prise de vues complète demandait environ <strong>10 à 30 minutes</strong>, selon l’objet : la perte de temps était importante.</p>
+  <div class="callout">Idéal : calculer un premier modèle, même de basse qualité, repérer les lacunes, ajouter les photographies nécessaires et relancer le calcul dans la même session.</div>
+
+  <h3>1.4 Suivre un objet entre plusieurs séances</h3>
+  <p>En atelier, l’objet peut être déplacé, retourné ou démonté entre deux séances, ce qui le distingue de nombreux sujets architecturaux. Il serait utile de recaler les acquisitions successives d’un même objet, y compris manuellement. Un repère physique placé au centre de la scène pourrait faciliter ce travail. Leur superposition permettrait de comparer l’état initial, les étapes du traitement et l’état final.</p>
+  <p>La création d’une seconde session posait parfois problème : l’application cherchait à reconnaître une image ou une configuration spatiale antérieure, sans toujours y parvenir.</p>
+  <figure>
+    <img src="image2.jpeg" alt="Écran de Dür.air indiquant « Searching for the closest snapshot… » devant un panneau d’extincteur" loading="lazy">
+    <figcaption>Lors de la reprise d’une session, l’application cherche à retrouver l’instantané le plus proche (« Searching for the closest snapshot… »).</figcaption>
+  </figure>
+
+  <h3>1.5 Filmer tout en prenant des photographies</h3>
+  <p>Filmer est très pratique pour documenter une manipulation ou un traitement, car la vidéo conserve la continuité de l’opération. Il faudrait aussi pouvoir prendre des photographies sans interrompre l’enregistrement, pour garder à la fois une vidéo complète et des images fixes des moments importants.</p>
+  <figure>
+    <img src="image3.jpeg" alt="Visualisation web d’un projet Dür.air avec un modèle 3D partiel d’une salle et d’un escalier" loading="lazy">
+    <figcaption>Visualisation web d’un projet : le modèle reconstruit reste lacunaire par endroits.</figcaption>
+  </figure>
+  
+  <h3>1.6 Le LiDAR</h3>
+  <p>L’absence de visualisation du LiDAR pendant la prise de photographies ou de vidéos est perturbante : il est difficile de savoir si la zone cadrée est bien enregistrée.</p>
+  <p>La reconstruction semble se recalculer plutôt que s’enrichir progressivement. Certaines zones déjà acquises disparaissent ou perdent en qualité pendant que l’on vise une autre partie de l’objet.</p>
+</section>
+
+<section id="devis">
+  <h2>2. Intérêt pour les visites préalables au devis</h2>
+  <p>L’« aller-voir » paraît être l’un des usages les plus pertinents de Dür.air. Avant un devis, le restaurateur doit parfois examiner de nombreux objets en peu de temps. Un modèle rapide, même peu détaillé, présente alors un intérêt pratique.</p>
+  <p>Le modèle permet de retrouver une dimension après la visite, si sa précision convient au besoin. Il peut éviter un déplacement pour une mesure oubliée. Lorsque la visite n’est pas facturée, la rapidité de l’acquisition compte particulièrement.</p>
+  <p>La qualité des images de l’iPad reste insuffisante pour toute la documentation : des photographies prises avec un boîtier restent nécessaires. Dür.air les complète par une capture rapide d’informations spatiales. Les essais à l’ESAA ne permettent toutefois pas de conclure sur cet usage, puisqu’ils concernaient des œuvres déjà présentes en atelier.</p>
+</section>
+
+<section id="annotation">
+  <h2>3. Annotation et constat d’état</h2>
+  <p>Le constat d’état a révélé les principaux écarts entre les fonctions de l’outil et nos besoins.</p>
+
+  <h3>3.1 Relation entre photographie, LiDAR et photogrammétrie</h3>
+  <p>Sur une photographie, l’utilisateur s’attend à tracer sur la surface qu’il voit. Lors des essais, le tracé semblait pourtant projeté sur la géométrie du LiDAR. Celui-ci fournit une référence spatiale et une géométrie mesurable, mais sa représentation reste parfois trop peu détaillée pour examiner les altérations. Le modèle photogrammétrique répond davantage à ce besoin visuel.</p>
+  <p>Un décalage apparaît donc entre la photographie et le support du tracé, et certaines annotations deviennent difficiles à localiser précisément. La relation entre ces représentations gagnerait à être plus claire pour l’utilisateur.</p>
+
+  <h3>3.2 Précision du tracé et choix du point de vue</h3>
+  <p>Plusieurs utilisateurs ont recommencé leurs annotations, car ils comprenaient mal la projection du tracé dans l’espace.</p>
+  <p>Le choix du point de vue posait aussi problème : l’utilisateur orientait le modèle pour montrer une altération, mais l’application le ramenait parfois vers une photographie prise sous un autre angle. Il avait alors l’impression de perdre le contrôle de la représentation.</p>
+  <p>La sélection et la localisation des éléments manquaient parfois de précision. Pour un constat d’état, chaque altération doit pourtant pouvoir être retrouvée sans ambiguïté.</p>
+
+  <h3>3.3 Organisation des annotations</h3>
+  <p>Un constat peut réunir plusieurs dizaines d’annotations sur un même objet, et leur gestion devient alors plus difficile. Il faudrait pouvoir les classer par typologie et les retrouver rapidement. L’affichage de groupes permettrait de limiter la surcharge visuelle du modèle et faciliterait la consultation du constat.</p>
+</section>
+
+<section id="prise-en-main">
+  <h2>4. Prise en main générale</h2>
+  <p>L’interface a été perçue comme <strong>simple et intuitive</strong>. Après quelques heures, les testeurs savaient créer un projet et lancer une acquisition. Ils pouvaient aussi consulter les données et produire des annotations.</p>
+  <div class="callout">Les difficultés concernent surtout les usages précis du métier : documenter une altération, reprendre une acquisition ou organiser un constat complet.</div>
+</section>
+
+<section id="limites">
+  <h2>5. Limites matérielles et consultation à distance</h2>
+  <p>Aucun des testeurs ne possédait personnellement d’iPad. L’accès à ce matériel constitue donc une contrainte, et il détermine aussi la qualité des prises de vues. L’intégration de photographies réalisées avec un appareil externe serait utile.</p>
+  <p>La consultation en dehors de la tablette a aussi posé problème. Certains appareils n’affichaient pas correctement la visualisation web. Les étudiantes ne pouvaient pas non plus poursuivre chez elles le travail sur les acquisitions de la journée.</p>
+  <p>Elles hésitaient donc à transmettre un lien à une institution ou à un professionnel, sans pouvoir garantir que le projet s’ouvrirait correctement. La consultation doit être fiable sur différents appareils, et permettre d’y poursuivre le travail d’annotation.</p>
+</section>
+
+<section id="bilan">
+  <h2>Premier bilan</h2>
+  <p>Les utilisateurs comprennent rapidement l’intérêt de Dür.air : l’outil réunit le modèle de l’objet, les photographies, les annotations et les mesures. Sa prise en main reste accessible aux débutants.</p>
+  <p>Les essais ont toutefois révélé des difficultés pour le constat d’état et le suivi des traitements. Les principales pistes d’amélioration concernent :</p>
+  <ul>
+    <li>l’organisation des photographies, leur association aux annotations et la prise de vue directement depuis une annotation ;</li>
+    <li>la reprise d’une acquisition après un premier calcul ;</li>
+    <li>la compréhension et la précision de la relation entre photographie, LiDAR et modèle photogrammétrique ;</li>
+    <li>la précision des tracés et la maîtrise du point de vue ;</li>
+    <li>le classement et l’affichage des annotations ;</li>
+    <li>le recalage des acquisitions successives d’un même objet ;</li>
+    <li>la prise de photographies sans interrompre un enregistrement vidéo ;</li>
+    <li>la visualisation du LiDAR et la stabilité de la reconstruction pendant la prise de vues ;</li>
+    <li>l’intégration de photographies externes ;</li>
+    <li>la consultation fiable des projets et la poursuite du travail sur différents appareils.</li>
+  </ul>
+  <div class="callout"><strong>Dür.air présente un intérêt pour la documentation spatiale, et les visites préalables au devis paraissent un usage prometteur. Lors des essais, l’outil ne permettait toutefois pas de centraliser tout le constat d’état : le passage entre acquisition, annotation et suivi reste à faciliter.</strong></div>
+</section>
+
+<section id="prolongements">
+  <h2>Prolongements du travail</h2>
+  <p>À partir de ces essais, j’ai développé deux plateformes qui explorent l’annotation et la présentation des acquisitions de Dür.air.</p>
+
+  <h3>Pygmalion</h3>
+  <p>J’ai développé Pygmalion pour permettre à mes camarades de poursuivre les annotations sans la tablette, depuis un ordinateur, sur un modèle acquis avec Dür.air. J’y ai ajouté un système de calques pour organiser les annotations et séparer les types d’observations. Chaque calque peut être affiché ou masqué : le modèle reste lisible, même lorsque les annotations se multiplient.</p>
+  <a class="btn" href="https://pygmalion-beta.netlify.app/" target="_blank" rel="noopener">Ouvrir Pygmalion</a>
+
+  <h3>Impression d’archive</h3>
+  <p>J’ai conçu Impression d’archive pour construire un récit à partir des acquisitions de Dür.air : les données sont présentées dans un parcours, plutôt que consultées isolément. Cette approche permettrait de raconter l’histoire d’un objet ou les étapes d’une intervention, et explore un usage des acquisitions pour la présentation et la transmission du travail de conservation-restauration.</p>
+  <a class="btn" href="https://impressiondarchive.netlify.app/" target="_blank" rel="noopener">Ouvrir Impression d’archive</a>
+</section>
+
+</main>
+
+<footer>Évaluation de Dür.air en conservation-restauration</footer>
+
+</body>
+</html>
