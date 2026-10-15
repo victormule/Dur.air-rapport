@@ -79,6 +79,13 @@
   figure { margin: 1.25rem 0; }
   figure img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border); display: block; }
   figcaption { color: var(--muted); font-size: .88rem; margin-top: .4rem; text-align: center; }
+  .thumbs { display: flex; gap: .5rem; flex-wrap: wrap; justify-content: center; margin-top: .6rem; }
+  .thumbs button {
+    padding: 0; border: 2px solid var(--border); border-radius: 8px; background: none;
+    cursor: pointer; overflow: hidden; width: 96px; height: 66px;
+  }
+  .thumbs button img { width: 100%; height: 100%; object-fit: cover; display: block; border: 0; border-radius: 0; }
+  .thumbs button[aria-pressed="true"] { border-color: var(--accent); }
   footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 2rem 1rem; }
 </style>
 </head>
@@ -122,9 +129,16 @@
 <section id="atelier">
   <h2>1. Utilisation en atelier</h2>
   <p>À l’ESAA, les œuvres étaient déjà présentes en atelier. Nous n’avons donc pas testé de situation d’« aller-voir » préalable au devis. Les essais ont porté sur le constat d’état et le suivi des traitements. Le poisson volant de Laura (5ᵉ année), étudiante particulièrement réceptive, a servi de cas d’étude récurrent.</p>
-  <figure>
-    <img src="image1.jpeg" alt="Capture d’écran de Dür.air : modèle 3D d’un grondin volant avec ses annotations" loading="lazy">
-    <figcaption>Le poisson volant de Laura (grondin volant) annoté dans Dür.air.</figcaption>
+  <figure id="viewer">
+    <img id="viewer-img" src="image1.jpeg" alt="Capture d’écran de Dür.air : modèle 3D d’un grondin volant avec ses annotations">
+    <figcaption id="viewer-cap">Le poisson volant de Laura (grondin volant) annoté dans Dür.air.</figcaption>
+    <div class="thumbs" role="group" aria-label="Autres objets testés">
+      <button type="button" aria-pressed="true" data-src="image1.jpeg" data-cap="Le poisson volant de Laura (grondin volant) annoté dans Dür.air." data-alt="Modèle 3D d’un grondin volant annoté"><img src="image1.jpeg" alt="Poisson volant"></button>
+      <button type="button" aria-pressed="false" data-src="bis-harpe.jpeg" data-cap="La harpe du Gabon de Marie : captures individuelles et annotation d’une zone d’altération." data-alt="Modèle 3D d’une harpe du Gabon avec une zone entourée"><img src="bis-harpe.jpeg" alt="Harpe du Gabon"></button>
+      <button type="button" aria-pressed="false" data-src="bis-masque.jpeg" data-cap="Le masque kanak de Charlotte dans Dür.air." data-alt="Masque kanak dans Dür.air"><img src="bis-masque.jpeg" alt="Masque kanak"></button>
+      <button type="button" aria-pressed="false" data-src="bis-monument.jpeg" data-cap="Le monument du centenaire de Laura dans Dür.air." data-alt="Monument du centenaire dans Dür.air"><img src="bis-monument.jpeg" alt="Monument du centenaire"></button>
+      <button type="button" aria-pressed="false" data-src="bis-graces.jpeg" data-cap="Les Trois Grâces en conversation d’Élise dans Dür.air." data-alt="Les Trois Grâces en conversation dans Dür.air"><img src="bis-graces.jpeg" alt="Trois Grâces en conversation"></button>
+    </div>
   </figure>
 
   <h3>1.1 Accompagnement des utilisateurs néophytes</h3>
@@ -158,6 +172,10 @@
   </figure>
   
   <h3>1.6 Le LiDAR</h3>
+  <figure>
+    <img src="lidar-atelier.jpeg" alt="Nuage de points LiDAR des ateliers de l’ESAA dans Dür.air" loading="lazy">
+    <figcaption>Test de captation LiDAR des ateliers.</figcaption>
+  </figure>
   <p>L’absence de visualisation du LiDAR pendant la prise de photographies ou de vidéos est perturbante : il est difficile de savoir si la zone cadrée est bien enregistrée.</p>
   <p>La reconstruction semble se recalculer plutôt que s’enrichir progressivement. Certaines zones déjà acquises disparaissent ou perdent en qualité pendant que l’on vise une autre partie de l’objet.</p>
 </section>
@@ -235,5 +253,17 @@
 
 <footer>Évaluation de Dür.air en conservation-restauration</footer>
 
+<script>
+  (function () {
+    var img = document.getElementById('viewer-img'), cap = document.getElementById('viewer-cap');
+    var btns = document.querySelectorAll('#viewer .thumbs button');
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        img.src = b.dataset.src; img.alt = b.dataset.alt; cap.textContent = b.dataset.cap;
+        btns.forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+      });
+    });
+  })();
+</script>
 </body>
 </html>
